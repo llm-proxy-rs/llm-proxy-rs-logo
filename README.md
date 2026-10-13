@@ -13,8 +13,11 @@ The mark is a straight copper pipe: constant width, a dark edge, copper across t
 | `docs/logo-circle.png` | 512 circle, cropped from the middle of the card |
 | `docs/logo2.png` | Square, 1024×1024, llm left to right in copper pipe |
 | `docs/logo2-512.png` | Same square, 512×512 |
+| `docs/logo3.png` | Square, 1024×1024, llm centered, rustacean below |
+| `docs/logo3-512.png` | Same square, 512×512 |
 
 ```bash
 python3 scripts/logo.py
 python3 scripts/logo2.py
+python3 scripts/logo3.py
 ```
