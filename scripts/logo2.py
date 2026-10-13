@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-"""Square mark: llm in copper pipe letters, stacked.
+"""Square mark: llm in copper pipe letters, left to right.
 
 Straight runs, elbows, couplings, and open mouths, on the cream field.
-One letter a line, so the word fills the square.
 """
 
 from __future__ import annotations
@@ -20,18 +19,15 @@ ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 
 SIZE = 1024
-LINES = ("l", "l", "m")
-TRACK = 0.04
+TEXT = "llm"
+TRACK = 0.06
 # Pipe and open mouths stick past the glyph box.
-PAD = 56.0
-GAP = 8.0
+PAD = 72.0
 
 
 def letter_size() -> float:
-    # Widest line sets the size. Three lines plus two gaps fill the rest.
-    widest = max(measure(line, 1.0, TRACK) for line in LINES)
-    by_width = (SIZE - PAD * 2) / widest
-    by_height = (SIZE - PAD * 2 - GAP * (len(LINES) - 1)) / len(LINES)
+    by_width = (SIZE - PAD * 2) / measure(TEXT, 1.0, TRACK)
+    by_height = SIZE - PAD * 2
     return min(by_width, by_height)
 
 
@@ -42,12 +38,8 @@ def render(path: Path, side: int = SIZE) -> None:
         cr.scale(side / SIZE, side / SIZE)
     wash(cr, SIZE, SIZE)
     size = letter_size()
-    block = size * len(LINES) + GAP * (len(LINES) - 1)
-    y = (SIZE - block) / 2
-    for line in LINES:
-        tw = measure(line, size, TRACK)
-        draw_line(cr, line, (SIZE - tw) / 2, y, size, TRACK)
-        y += size + GAP
+    tw = measure(TEXT, size, TRACK)
+    draw_line(cr, TEXT, (SIZE - tw) / 2, (SIZE - size) / 2, size, TRACK)
     path.parent.mkdir(parents=True, exist_ok=True)
     surf.write_to_png(str(path))
 

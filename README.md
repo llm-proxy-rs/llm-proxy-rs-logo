@@ -11,7 +11,7 @@ The mark is a straight copper pipe: constant width, a dark edge, copper across t
 | `docs/logo.png` | Master, 1024×1396 |
 | `docs/logo-512.png` | 512px wide |
 | `docs/logo-circle.png` | 512 circle, cropped from the middle of the card |
-| `docs/logo2.png` | Square, 1024×1024, llm stacked in copper pipe |
+| `docs/logo2.png` | Square, 1024×1024, llm left to right in copper pipe |
 | `docs/logo2-512.png` | Same square, 512×512 |
 
 ```bash
