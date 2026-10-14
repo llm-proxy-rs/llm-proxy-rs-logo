@@ -21,6 +21,11 @@ The mark is a straight copper pipe: constant width, a dark edge, copper across t
 | `docs/logo5-512.png` | Same square, 512×512 |
 | `docs/logo6.png` | Square, 1024×1024, same trident as logo 5, slightly thicker pipe |
 | `docs/logo6-512.png` | Same square, 512×512 |
+| `docs/logo-jongwhan.png` | Square, 1024×1024, rustacean with a pipe, by [Jongwhan Lee](https://github.com/leejw51) |
+| `docs/logo-jongwhan-512.png` | Same square, 512×512 |
+| `assets/logo-jongwhan.jpg` | Source drawing by Jongwhan Lee |
+
+`logo-jongwhan` is by Jongwhan Lee ([@leejw51](https://github.com/leejw51)). The script only scales his drawing to the square sizes. It does not redraw the crab.
 
 ```bash
 python3 scripts/logo.py
@@ -29,4 +34,5 @@ python3 scripts/logo3.py
 python3 scripts/logo4.py
 python3 scripts/logo5.py
 python3 scripts/logo6.py
+python3 scripts/logo_jongwhan.py
 ```
