@@ -19,6 +19,8 @@ The mark is a straight copper pipe: constant width, a dark edge, copper across t
 | `docs/logo4-512.png` | Same square, 512×512 |
 | `docs/logo5.png` | Square, 1024×1024, llm and the pipe as a trident aimed at the crab, proxy down the pipe |
 | `docs/logo5-512.png` | Same square, 512×512 |
+| `docs/logo6.png` | Square, 1024×1024, same trident as logo 5, slightly thicker pipe |
+| `docs/logo6-512.png` | Same square, 512×512 |
 
 ```bash
 python3 scripts/logo.py
@@ -26,4 +28,5 @@ python3 scripts/logo2.py
 python3 scripts/logo3.py
 python3 scripts/logo4.py
 python3 scripts/logo5.py
+python3 scripts/logo6.py
 ```
